@@ -19,8 +19,11 @@ export default {
 					},
 
 					}
-				}
-			}
-		},
-	plugins: [],
+				},
+			gridTemplateColumns: {
+				'20/60/20': '20% 60% 20%',
+			},
+		}
+	},
+plugins: [],
 }

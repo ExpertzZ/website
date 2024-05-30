@@ -1,5 +1,5 @@
 ---
-import NavigationBar from "../layout/NavigationBar.astro"
+import NavigationBar from "../layout/NavigationBar.jsx"
 import GlowingButton from "../components/GlowingButton.astro"
 
 ---
@@ -13,7 +13,7 @@ import GlowingButton from "../components/GlowingButton.astro"
 		<title>Astro</title>
 	</head>
 	<body>
-		<NavigationBar></NavigationBar>
+		<NavigationBar client:load ></NavigationBar>
 		<GlowingButton></GlowingButton>		
 	</body>
 </html>
