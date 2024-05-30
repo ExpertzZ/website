@@ -1,17 +1,23 @@
 ---
+const { class: className, ...rest } = Astro.props;
 ---
+
+<div class={`${className}`} {...rest}></div>
+
 <div class="grid gap-8 justify-center">
     <div class="relative mx-4 my-4 group ">
         <div class="absolute -inset-0.5 opacity-75 bg-gradient-to-r from-pink-600 to-purple-600 rounded-lg blur group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
-        <button class="relative px-7 py-4 bg-black rounded-lg leading-none flex items-center divide-x divide-gray-600 ">
+        <button class="relative px-12 py-6 bg-black rounded-lg leading-none flex items-center divide-x divide-gray-600 ">
             <span class="flex items-center space-x-5">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-pink-600 -rotate-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                 </svg>          
-                <span class="pr-6 text-gray-100">Taha C. Kaya</span>
+                <span class="pr-6 text-gray-100 text-4xl">Taha C. Kaya</span>
             </span> 
-            <span class="pl-6 text-indigo-400 group-hover:text-gray-100 transition duration-200">See my projects &rarr;</span>
+            <span class="pl-6 text-indigo-400 group-hover:text-gray-100 transition duration-200 text-xl">See my projects &rarr;</span>
         </button>
     </div>
 </div>
+
+
 
