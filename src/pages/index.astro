@@ -1,6 +1,6 @@
 ---
-import Background from "../layout/Background.astro"
 import GlowingButton from "../components/GlowingButton.astro"
+import NavigationBar from "../layout/NavigationBar"
 
 ---
 
@@ -13,6 +13,7 @@ import GlowingButton from "../components/GlowingButton.astro"
 		<title>Astro</title>
 	</head>
 	<body>
+		<NavigationBar client:load></NavigationBar>
 		<GlowingButton></GlowingButton>		
 	</body>
 </html>
