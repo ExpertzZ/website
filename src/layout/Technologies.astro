@@ -1,0 +1,54 @@
+---
+import { onMount } from '@astro'
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        console.log(entry);
+        if(entry.isIntersecting){
+            entry.target.classList.add('show');
+        } else {
+            entry.target.classList.remove('show');
+        }
+    });
+});
+
+const hidenElements = document.querySelectorAll('.hidden');
+hidenElements.forEach((element => observer.observe(element)));
+---
+<section>
+    <h2>Languages and Technologies</h2>
+    <div class="logos">
+        <div class="logo hidden">
+            <img src="/javascript.svg" alt="JavaScript">
+        </div>
+        <div class="logo hidden">
+            <img src="/typescript.svg" alt="Typescript">
+        </div>
+        <div class="logo hidden">
+            <img src="/python.svg" alt="Python">
+        </div>
+        </div>
+    </div>
+</section>
+
+
+<style>
+    section{
+        display: grid;
+        place-items: center;
+        align-content: center;
+    }
+    h2{
+        color: black;
+        text-align: center;
+    }
+    
+    .logo:nth-child(2){
+        transition-delay: 200ms;
+    }
+
+    .logo:nth-child(3){
+        transition-delay: 400ms;
+    }
+
+</style>

@@ -1,7 +1,7 @@
 ---
 import GlowingButton from "../components/GlowingButton.astro"
 import NavigationBar from "../layout/NavigationBar"
-
+import Technologies from "../layout/Technologies.astro"
 ---
 
 <html lang="en">
@@ -14,13 +14,15 @@ import NavigationBar from "../layout/NavigationBar"
 	</head>
 	<body>
 		<NavigationBar client:load></NavigationBar>
-		<GlowingButton class="GlowingButton"></GlowingButton>		
+		<GlowingButton class="GlowingButton"></GlowingButton>	
+		<Technologies></Technologies>	
+		
 	</body>
 </html>
 
 <style>
 	*{
-		background-color: black;
+		background-color: white;
 	}
 
 	.GlowingButton{
