@@ -1,0 +1,65 @@
+---
+---
+<script>
+    const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        console.log(entry);
+        if(entry.isIntersecting){
+            entry.target.classList.add('show');
+        } else {
+            entry.target.classList.remove('show');
+        }
+    });
+});
+
+const hidenElements = document.querySelectorAll('.hide');
+hidenElements.forEach((element => observer.observe(element)));
+</script>
+
+<section>
+<h2>Languages and Technologies</h2>
+<div class="logos">
+    <div class="logo">
+        <img src="/javascript.svg" alt="JavaScript">
+    </div>
+    <div class="logo">
+        <img src="/typescript.svg" alt="Typescript">
+    </div>
+    <div class="logo">
+        <img src="/python.svg" alt="Python">
+    </div>
+</div>
+</section>
+
+
+<style>
+
+section{
+    display: grid;
+    place-items: center;
+    align-content: center;
+}
+
+h2{
+    color: black;
+    text-align: center;
+}
+
+.hide{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.show{
+    opacity: 1;
+    filter: blur(0 );
+    transform: translateX(0);
+}
+
+.logos{
+    display: ;
+}
+
+</style>
