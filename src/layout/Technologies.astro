@@ -1,5 +1,9 @@
 ---
+import '../styles/global.css';
+import '@fontsource/roboto';
+
 const { class: className, ...rest } = Astro.props;
+
 ---
 <div class={`${className}`} {...rest}></div>
 
@@ -20,7 +24,9 @@ const { class: className, ...rest } = Astro.props;
 </script>
 
 <section>
-    <h2>Languages and Technologies</h2>
+    
+        <h2 class=" font-roboto">LANGUAGES</h2>
+    
     <div class="logos">
         <div class="logo hide">
             <img src="/javascript.svg" alt="JavaScript">
@@ -45,6 +51,9 @@ const { class: className, ...rest } = Astro.props;
     h2{
         color: black;
         text-align: center;
+        font-family: "Roboto";
+        font-weight: 900;
+        font-size: 2rem;
     }
 
     .hide{
@@ -71,7 +80,5 @@ const { class: className, ...rest } = Astro.props;
     .logo:nth-child(3){
         transition-delay: 400ms;
     }
-
-    
 
 </style>
