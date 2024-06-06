@@ -2,6 +2,7 @@
 import GlowingButton from "../components/GlowingButton.astro"
 import NavigationBar from "../layout/NavigationBar"
 import Technologies from "../layout/Technologies.astro"
+import Hero from "../layout/Hero.jsx"
 ---
 
 <html lang="en">
@@ -13,9 +14,10 @@ import Technologies from "../layout/Technologies.astro"
 		<title>T</title>
 	</head>
 	<body>
-		<NavigationBar client:load></NavigationBar>
+		<Hero client:load></Hero>
 		<GlowingButton class="GlowingButton"></GlowingButton>	
-		<Technologies class="Technologies"</Technologies>	
+		<Technologies class="Technologies"></Technologies>	
+
 		
 	</body>
 </html>
@@ -32,4 +34,14 @@ import Technologies from "../layout/Technologies.astro"
 	.Technologies{
 		margin-top: 45vh;
 	}
+
+	html {
+    overflow: hidden;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    overflow: auto;
+}
 </style>

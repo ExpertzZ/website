@@ -4,9 +4,11 @@ import react from "@astrojs/react";
 
 import netlify from "@astrojs/netlify";
 
-// https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), react()],
+  integrations: [tailwind({
+    // Example: Provide a custom path to a Tailwind config file
+    configFile: './tailwind.config.mjs',
+  }), react()],
   output: "server",
   adapter: netlify()
 });
