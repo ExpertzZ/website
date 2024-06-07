@@ -60,8 +60,6 @@ const Hero = () => {
                     className='text-6xl md:text-8xl 2xl:text-9xl text-white'>
                         TAHA C. KAYA
                 </div>
-
-    
                 <motion.div
                     variants={container}
                     initial={{ x: '-50vw', opacity: 0}}
@@ -96,7 +94,7 @@ const Hero = () => {
                         <motion.div 
                             variants={icon}
                             className='bg-blue-200 m-auto p-2 rounded-full transform transition duration:200 hover:scale-125 active:scale-95'>
-                            <a href='https://www.linkedin.com/in/tahac.kaya' target='_blank' rel="noopener noreferrer"><img className='h-4 w-4 md:h-5 md:w-5' alt='LinkedIn' src="/linkedin.svg"/></a>
+                            <a href='https://www.linkedin.com/in/tahackaya' target='_blank' rel="noopener noreferrer"><img className='h-4 w-4 md:h-5 md:w-5' alt='LinkedIn' src="/linkedin.svg"/></a>
                         </motion.div>
                         <motion.div 
                             variants={icon}
