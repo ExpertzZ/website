@@ -1,0 +1,45 @@
+---
+import "../styles/global.css"
+import "@fontsource/chakra-petch"
+import BlackButton from "../components/GlowingButton.astro"
+---
+
+<section>
+
+    <p class=" mb-20 mt-20">
+        I am a Full Stack Engineer based in Frankfurt, Germany. 
+        My passion for programming began during my school years when I started building mini-games in Unity. 
+        This early experience ignited my interest in coding, which has only grown stronger over time.
+
+        Throughout my journey, I discovered the immense utility and versatility of web development, 
+        which has become a key focus of my work. Beyond coding, 
+        I have a broad interest in various technologies and a strong enthusiasm for motorcycling.
+    </p>
+
+    <BlackButton></BlackButton>
+
+</section>
+
+<style>
+
+    section{
+        display: grid;
+        place-items: center;
+        padding: 2rem;
+        font-family: 'Chakra Petch', sans-serif;
+    }
+
+    p{
+    
+        font-family: "Chakra Petch", sans-serif;
+        width: 65%;
+        text-wrap: balance;
+        font-size: 1.6em;
+        @media (max-width: 768px) {
+            font-size: 1.2em;
+            line-height: 1.9;
+        }
+        line-height: 2.4rem;
+    }
+
+</style>

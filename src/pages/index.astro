@@ -3,6 +3,7 @@ import GlowingButton from "../components/GlowingButton.astro"
 import NavigationBar from "../layout/NavigationBar"
 import Technologies from "../layout/Technologies.astro"
 import Hero from "../layout/Hero.jsx"
+import AboutMe from "../layout/AboutMe.astro"
 ---
 
 <html lang="en">
@@ -11,11 +12,14 @@ import Hero from "../layout/Hero.jsx"
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+		<link rel="preload" href="/path/to/vanta.net.min.js" as="script">
 		<title>T</title>
 	</head>
 	<body>
-		<Hero client:load></Hero>
-		<GlowingButton class="GlowingButton"></GlowingButton>	
+		<Hero client:visible></Hero>
+		<AboutMe></AboutMe>
+
+
 	
 	</body>
 </html>
